@@ -11,7 +11,7 @@ import richarlisonImg from "./components/richarlison.jpg";
 import brunoImg from "./components/bruno.jpg";
 import haalandImg from "./components/haaland.jpg";
 import JezImg from "./components/Jez.jpg";
-import sound from "./components/sound.mp3"; // Import the sound file
+import sound from "./components/sound.mp3";
 
 function App() {
   const [reviews, setReviews] = useState([]);
@@ -85,7 +85,6 @@ function App() {
     }
   };
 
-  // Function to play sound
   const playSound = () => {
     const audio = new Audio(sound);
     audio.play();
