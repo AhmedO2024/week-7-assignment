@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     const fetchReviews = async () => {
-      const response = await fetch("http://localhost:8080/player_review");
+      const response = await fetch("/player_review");
       const data = await response.json();
       setReviews(data);
     };
@@ -44,7 +44,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("http://localhost:8080/player_review", {
+    const response = await fetch("/player_review", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -66,7 +66,7 @@ function App() {
   const handleDelete = async (id) => {
     const enteredPassword = prompt("Enter the password to confirm deletion:");
 
-    const response = await fetch(`http://localhost:8080/player_review/${id}`, {
+    const response = await fetch(`/player_review/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
